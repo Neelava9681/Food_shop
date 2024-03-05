@@ -1,11 +1,10 @@
+const mongodb = require("./db");
+const express = require("express");
+const app = express();
+const cors = require("cors");
 
-const mongodb = require ("./db")
-const express = require('express')
-const app = express()
-const cors = require("cors")
-
-const port = 6000
-mongodb()
+const port = 5001;
+mongodb();
 
 // app.use((req, res, next)=>{
 //   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
@@ -18,16 +17,16 @@ mongodb()
 
 app.use(
   cors({
-    origin:"http://localhost:3000",
+    origin: "http://localhost:3000",
   })
-  );
+);
 
-app.get('/', (req, res) => {
-  res.send('Hello world!')
-})
-app.use(express.json())
+app.get("/", (req, res) => {
+  res.send("Hello world!");
+});
+app.use(express.json());
 app.use("/api", require("./Routes/CreateUser"));
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+  console.log(`Example app listening on port ${port}`);
+});
