@@ -2,6 +2,13 @@ import React, { useState } from "react";
 import axios from 'axios';
 import "../screens/Signup.css";
 import { Link } from "react-router-dom";
+
+
+
+
+
+
+
 export default function Signup() {
   const [credentials, setcredentials] = useState({
     name: "",
@@ -9,6 +16,10 @@ export default function Signup() {
     password: "",
     location: "",
   });
+
+  // useEffect(() => {
+  //   console.log(credentials);
+  // }, []);
 
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
@@ -33,39 +44,46 @@ export default function Signup() {
 //   };
 
 
+
+const onChange = (event) => {
+  setcredentials({ ...credentials, [event.target.name]: event.target.value });
+  console.log(credentials)
+};
+
 const handleSubmit = async (e) => {
     try {
         e.preventDefault();
 
-        const response = await axios.post("http://localhost:6000/api/createuser", {
+        const response = await axios.post("http://localhost:5001/api/createuser", {
             name: credentials.name,
             email: credentials.email,
             password: credentials.password,
             location: credentials.location,
-        }, {
+        },
+         {
             headers: {
                 "Content-Type": "application/json"
             }
         });
+        
 
         if (!response.data.success) {
             alert("Enter valid credentials");
         } else {
             console.log(response.data);
+            
         }
     } catch (error) {
         console.error("Error:", error);
         // Handle error appropriately, e.g., show a user-friendly message
         alert("An error occurred. Please try again later.");
     }
+    
 };
 
   
   
 
-  const onChange = (event) => {
-    setcredentials({ ...credentials, [event.target.name]: event.target.value });
-  };
 
   return (
     <>
