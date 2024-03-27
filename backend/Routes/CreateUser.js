@@ -4,7 +4,8 @@ const user = require("../models/User");
 const { body, validationResult } = require("express-validator");
 
 const bcrypt = require("bcrypt")
-
+const jwt = require("jsonwebtoken")
+const jwtSecret = "iMeeLdsbhdgjhewkwejg#@$"
 
 
 router.post(
@@ -43,27 +44,40 @@ router.post(
 
 router.post(
   "/loginuser",
-  // [
-  //   body("email").isEmail(),
-  //   // password must be at least 5 chars long
-  //   body("password", "incorrect password").isLength({ min: 5 }),
-  // ],
+  [
+    body("email").isEmail(),
+    // password must be at least 5 chars long
+    body("password", "incorrect password").isLength({ min: 5 }),
+  ],
   async (req, res) => {
-    // const errors = validationResult(req);
-    // if (!errors.isEmpty()) {
-    //   return res.status(400).json({ errors: errors.array() });
-    // }
-    let email = req.body.email;
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+   const email = req.body.email;
+   const password=req.body.password;
     console.log(email)
     try {
       let userData = await user.findOne({ email: email });
       if (!userData) {
         return res.status(400).json({ error: "enter valid email" });
       }
-      if (req.body.password !== userData.password) {
-        return res.status(400).json({ error: "enter valid password" });
+
+      const pwdCompare = await bcrypt.compare(password, userData.password);
+      if (!pwdCompare) {
+        return res.status(400).json({ error: 'Invalid password' });
       }
-      return res.json({ sucess: true });
+
+      const data={
+        user:{
+          id:userData.id
+        }
+      }
+
+
+      const authToken = jwt.sign(data, jwtSecret)
+
+      return res.json({ sucess: true, authToken });
     } catch (error) {
       console.log(error);
       res.json({ success: false });

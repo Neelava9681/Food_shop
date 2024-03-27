@@ -3,7 +3,7 @@ import React from 'react'
 export default function Carousal() {
     return (
         <div>
-            <div id="carouselExampleIndicators" className="carousel slide" >
+            <div id="carouselExampleIndicators" className="carousel slide" style={{height:"80vh", overflow:"hidden"}}>
                 
                 <div className="carousel-indicators">
                     
@@ -12,22 +12,22 @@ export default function Carousal() {
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div className="carousel-inner" id="carousal">
-                    <div class="carousel-caption" style={{zIndex:"1"}}>
+                    <div class="carousel-caption" style={{zIndex:"2"}}>
                     
-                        <form class="d-flex">
+                        <form class="d-flex" >
                            
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
-                                <button class="btn btn-outline-success test-white bg-success" type="submit">Search</button>
+                                <button class="btn btn-outline-success test-white bg-success text-light" type="submit">Search</button>
                         </form>
                     </div>
                     <div className="carousel-item active">
-                        <img src="https://source.unsplash.com/random/900x700/?burger" className="d-block w-100" style={{filter:"brightness(30%)"}} alt="..."></img>
+                        <img src="https://source.unsplash.com/random/900x700/?burger" height="560px" width="auto" className="d-block w-100" style={{filter:"brightness(30%)"}} alt="..."></img>
                     </div>
                     <div className="carousel-item">
-                        <img src="https://source.unsplash.com/random/900x700/?pastry" className="d-block w-100" style={{filter:"brightness(30%)"}} alt="..."></img>
+                        <img src="https://source.unsplash.com/random/900x700/?pastry" height="560px" width="auto" className="d-block w-100" style={{filter:"brightness(30%)"}} alt="..."></img>
                     </div>
                     <div className="carousel-item">
-                        <img src="https://source.unsplash.com/random/900x700/?burger" className="d-block w-100" style={{filter:"brightness(30%)"}}  alt="..."></img>
+                        <img src="https://source.unsplash.com/random/900x700/?burger" height="560px" width="auto" className="d-block w-100" style={{filter:"brightness(30%)"}}  alt="..."></img>
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

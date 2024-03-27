@@ -32,9 +32,11 @@ function Login() {
         },
       }
     );
-  console.log(response)
+  
+  const json = await response.data
+  console.log(json)
 
-  if (response.data.success) {
+  if (json.success) {
     console.log("Login successful");
   } else {
     console.log("Login unsuccessful");

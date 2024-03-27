@@ -20,7 +20,7 @@ export default function Navbar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div className="collapse navbar-collapse" id="navbarNav" style={{display:"flex", justifyContent:"right"}}>
             <ul className="navbar-nav">
               <li className="nav-item">
                 <Link
@@ -30,14 +30,14 @@ export default function Navbar() {
                     color: "white",
                     padding: "8px 12px",
                     borderRadius: "8px",
-                    backgroundColor: "red",
+                    
                     transition: "background-color 0.3s ease",
                     fontWeight: "30px",
                   }}
                   aria-current="page"
                   to="/"
                 >
-                  Home
+                 <b> Home</b>
                 </Link>
               </li>
               <li className="nav-item">
@@ -49,13 +49,13 @@ export default function Navbar() {
                     padding: "8px 12px",
                     marginLeft: "20px",
                     borderRadius: "8px",
-                    backgroundColor: "red",
+                   
                     transition: "background-color 0.3s ease",
                     fontWeight: "30px",
                   }}
                   to="/login"
                 >
-                  Login
+                  <b>Login</b>
                 </Link>
               </li>
               <li className="nav-item">
@@ -67,13 +67,13 @@ export default function Navbar() {
                     padding: "8px 12px",
                     marginLeft: "20px",
                     borderRadius: "8px",
-                    backgroundColor: "red",
+                    
                     transition: "background-color 0.3s ease",
                     fontWeight: "30px",
                   }}
                   to="/signup"
                 >
-                  Signup
+                  <b>Signup</b>
                 </Link>
               </li>
             </ul>
