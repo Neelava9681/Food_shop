@@ -24,7 +24,7 @@ function Login() {
       "http://localhost:5001/api/loginuser",
       {
         email: credentials.email,
-        password: credentials.password,
+        password: credentials.password
       },
       {
         headers: {
@@ -33,24 +33,15 @@ function Login() {
       }
     );
   console.log(response)
-      const  data  = response.data; // Destructure data from response
-        
 
-
-      if (!data.success) {
-        // Assuming the response contains a 'success' property
-        alert("Enter valid credentials");
-      } else {
-        // Assuming successful login returns some data including authentication token
-        console.log("Login successful:", data);
-  
-        // You might want to store the authentication token or handle the login success in some other way
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      // Handle error appropriately, e.g., show a user-friendly message
-      // alert("An error occurred. Please try again later.");
-    }
+  if (response.data.success) {
+    console.log("Login successful");
+  } else {
+    console.log("Login unsuccessful");
+  }
+  } catch (error) {
+  console.error("Error:", error);
+  }
   };
   
 
