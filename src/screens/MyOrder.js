@@ -9,7 +9,7 @@ export default function MyOrder() {
   const fetchMyOrder = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:5001/api/myOrderData",
+        "https://food-shop-2.onrender.com/myOrderData",
         {
           email: localStorage.getItem("userEmail"),
         },

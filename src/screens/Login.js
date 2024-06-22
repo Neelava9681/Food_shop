@@ -21,7 +21,7 @@ function Login() {
       console.log(credentials);
 
       const response = await axios.post(
-        "http://localhost:5001/api/loginuser",
+        "https://food-shop-2.onrender.com/api/loginuser",
         {
           email: credentials.email,
           password: credentials.password,

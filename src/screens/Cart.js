@@ -20,7 +20,7 @@ export default function Cart() {
     console.log(userEmail)
     console.log(data)
     const response = await axios.post(
-      "http://localhost:5001/api/oderData",
+      "https://food-shop-2.onrender.com/api/oderData",
       {
         order_data: data,
         email: userEmail,
