@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -8,10 +8,11 @@ export default function Footer() {
     <div className="col-md-4 d-flex align-items-center">
       <link to="/" className="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
       </link>
-      <span className="text-muted">© 2023,GoFood, Inc</span>
+      <span className="text-muted">© 2023,SayEat!, Inc</span>
     </div>
 
     <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
+    <span className="text-muted">Developed by Neelava </span>
     </ul>
   </footer>
     </div>

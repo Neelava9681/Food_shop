@@ -1,6 +1,6 @@
 [
     {
-        "CategoryName": "Biryani/Rice",
+        "CategoryName": "Biriyani/Rice",
         "name": "Chicken Fried Rice",
         "img": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hpY2tlbiUyMGZyaWVkJTIwcmljZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
         "options": [
@@ -12,7 +12,7 @@
         "description": "Made using Indian masalas and Basmati rice. Barbequed pieces of Paneer/Chicken/Mutton were added."
     },
     {
-        "CategoryName": "Biryani/Rice",
+        "CategoryName": "Biriyani/Rice",
         "name": "Veg Fried Rice",
         "img": "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dmVnJTIwZnJpZWQlMjByaWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
         "options": [
@@ -24,9 +24,9 @@
         "description": "Made using Indian masalas and Basmati rice. Barbequed pieces of Paneer/Chicken/Mutton were added."
     },
     {
-        "CategoryName": "Biryani/Rice",
-        "name": "Fish Biryani",
-        "img": "https://media.istockphoto.com/photos/king-fish-biryani-with-raita-served-in-a-golden-dish-isolated-on-dark-picture-id1409942571?b=1&k=20&m=1409942571&s=170667a&w=0&h=ozlMJf5hsDmS2sSdEdBWnoSZOEITef4qGMeWeq2lyTc=",
+        "CategoryName": "Biriyani/Rice",
+        "name": "Fish Biriyani",
+        "img": "https://media.istockphoto.com/photos/king-fish-biriyani-with-raita-served-in-a-golden-dish-isolated-on-dark-picture-id1409942571?b=1&k=20&m=1409942571&s=170667a&w=0&h=ozlMJf5hsDmS2sSdEdBWnoSZOEITef4qGMeWeq2lyTc=",
         "options": [
             {
                 "half": "200",
@@ -36,8 +36,8 @@
         "description": "Made using Indian masalas and Basmati rice. Barbequed pieces of Paneer/Chicken/Mutton were added."
     },
     {
-        "CategoryName": "Biryani/Rice",
-        "name": "Chicken Biryani",
+        "CategoryName": "Biriyani/Rice",
+        "name": "Chicken Biriyani",
         "img": "https://cdn.pixabay.com/photo/2019/11/04/12/16/rice-4601049__340.jpg",
         "options": [
             {
@@ -48,9 +48,9 @@
         "description": "Made using Indian masalas and Basmati rice. Barbequed pieces of Paneer/Chicken/Mutton were added."
     },
     {
-        "CategoryName": "Biryani/Rice",
-        "name": "Veg Biryani",
-        "img": "https://media.istockphoto.com/photos/veg-biryani-picture-id1363306527?b=1&k=20&m=1363306527&s=170667a&w=0&h=VCbro7CX8nq2kruynWOCO2GbMGCea2dDJy6O6ebCKD0=",
+        "CategoryName": "Biriyani/Rice",
+        "name": "Veg Biriyani",
+        "img": "https://media.istockphoto.com/photos/veg-biriyani-picture-id1363306527?b=1&k=20&m=1363306527&s=170667a&w=0&h=VCbro7CX8nq2kruynWOCO2GbMGCea2dDJy6O6ebCKD0=",
         "options": [
             {
                 "half": "150",
@@ -60,7 +60,7 @@
         "description": "Made using Indian masalas and Basmati rice. Barbequed pieces of Paneer/Chicken/Mutton were added."
     },
     {
-        "CategoryName": "Biryani/Rice",
+        "CategoryName": "Biriyani/Rice",
         "name": "Prawns Fried Rice",
         "img": "https://cdn.pixabay.com/photo/2018/03/23/08/27/thai-fried-rice-3253027__340.jpg",
         "options": [

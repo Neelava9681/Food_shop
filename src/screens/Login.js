@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [credentials, setcredentials] = useState({
@@ -12,46 +13,51 @@ function Login() {
     setcredentials({ ...credentials, [event.target.name]: event.target.value });
     console.log(credentials);
   };
+  const Navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-     console.log(credentials)
- 
-  
-   
-     const response = await axios.post(
-      "http://localhost:5001/api/loginuser",
-      {
-        email: credentials.email,
-        password: credentials.password
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-  
-  const json = await response.data
-  console.log(json)
+      console.log(credentials);
 
-  if (json.success) {
-    console.log("Login successful");
-  } else {
-    console.log("Login unsuccessful");
-  }
-  } catch (error) {
-  console.error("Error:", error);
-  }
+      const response = await axios.post(
+        "http://localhost:5001/api/loginuser",
+        {
+          email: credentials.email,
+          password: credentials.password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      const json = response.data;
+      const authToken= "authToken"
+
+      console.log(json);
+      if (!json.success) {
+        console.log("enter valid credentials");
+      }
+      if (json.success) {
+        alert("login done");
+        localStorage.setItem("userEmail", credentials.email)
+        localStorage.setItem("authToken", json.authToken)
+        console.log(localStorage.getItem(authToken))
+        Navigate("/")
+        
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("enter valid credensials");
+    }
   };
-  
 
   return (
     <>
       <div className="container">
         <form onSubmit={handleSubmit}>
-          
           <div className="mb-3">
             <label className="form-label">Email address</label>
             <input
@@ -72,7 +78,7 @@ function Login() {
               onChange={onChange}
             />
           </div>
-         
+
           <button type="submit" className="btn btn-success">
             Submit
           </button>
